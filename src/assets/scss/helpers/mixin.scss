@@ -1,0 +1,31 @@
+// MEDIA BREAKPOINTS
+@mixin media($breakpoint, $point) {
+    @if $breakpoint == down {
+      @media (max-width: #{$point - 0.2}) { @content; }
+    }
+    @else if $breakpoint == up {
+      @media (min-width: $point) { @content; }
+    }
+  }
+  
+  // How to use media mixin demo
+  //  body {
+  //    background:$primary;
+  //    @include media(down, $breakpoint-xl) {
+  //      background: $secondary;
+  //    }
+  //  }
+  //  body {
+  //    background: $secondary;
+  //    @include media(up, $breakpoint-xl) {
+  //      background: $primary;
+  //    }
+  // }
+  // POSITION 
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+  }

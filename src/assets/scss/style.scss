@@ -1,0 +1,22 @@
+@import "helpers/variables";
+
+// if you want you can import bootstrap scss file here
+
+// Custom Files
+@import "helpers/import.scss";
+@import "components/all.scss";
+
+// Layout
+body,
+html {
+    height: 100%;
+}
+
+body {
+    background: $body-bg;
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    line-height: $line-height-base; // 1.5 
+    color: $black;
+    font-weight: $font-regular;
+}
